@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta
+content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+name="viewport">
+<title>SteamTools游戏列表</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+<!-- 上方内容 -->
+  <div class="box">
+      <div class="head">
+         <span>SteamTools 游戏列表 Ctrl+F 搜索</span>
+         <a target="_blank" href="https://www.steamtools.net">SteamTools官网</a>
+      </div>
+  <!-- 图片内容 -->
+  <ul id="dd">
+    <li>
+      <div class="deatil">
+         <h2>列表加载中</h2>
+		 <h6>Days Gone</h6>
+         <div class="bq"><span>标签</span><span>标签</span><span>标签</span><span>标签</span><span>标签</span></div>
+        <a class="aaa" href="steam://run/1259420">马上开玩</a>
+        <div class="ca">
+            <a target="_blank" href="https://store.steampowered.com/app/1259420" >游戏商店</a>
+            <a target="_blank" href="https://steamdb.info/app/1259420/depots/" >游戏数据</a>
+        </div>
+
+</div>
+<img data-src="https://cdn.cloudflare.steamstatic.com/steam/apps/1259420/header.jpg" width="100%" height="215px" alt=""/>
+<a class="gamename" href="steam://run/1259420" style="color: #000;"><h4>列表加载中</h4></a>
+</li>
+
+
+  </ul>
+  </div>
+</body>
+<script type="text/javascript" src="j.js"></script>
+<script type="text/javascript">
+$.ajax({
+    url: "./game.json",      //异步请求链接
+    type:"GET",             //请求方式，一般是GET、POST
+   // data: "{'xxx':'xxx'}",          //异步请求数据
+    dataType:"json",            //数据类型，json表示返回json数据，需要跨域请求时jsonp
+    scriptCharset:"utf-8",      //数据编码格式
+   // async:false,                //异步返回，默认false
+    cache:true,             //数据缓存，默认true
+    success:function(result) {      //异步调用成功
+        /* 回调数据处理 */
+		console.info(result);
+		var str = ""
+        for (const key in result) {
+            var labt = "";
+            if (result[key].c == undefined || result[key].c == ""){
+                result[key].c = result[key].u;
+            }
+            for (const lab in result[key].l) {
+                labt = labt+"<span>"+result[key].l[lab]+"</span>"
+            }
+            var st = "    <li>\n" +
+                "      <div class='deatil'>\n" +
+                "         <h2>"+result[key].c+"</h2>\n" +
+                "\t\t <h6>"+result[key].u+"</h6>\n" +
+                "         <div class='bq'>"+labt+"</div>\n" +
+                "         <a class='aaa' href='steam://run/"+result[key].i+"'>马上开玩</a>\n" +
+                "\t\t <div class='ca'>\n" +
+                "            <a target=\"_blank\" href=\"https://store.steampowered.com/app/"+result[key].i+"\" >游戏商店</a>\n" +
+                "            <a target=\"_blank\" href=\"https://steamdb.info/app/"+result[key].i+"/depots/\" >游戏数据</a>" +
+                "\t\t </div>\n" +
+
+                "      </div>\n" +
+                "      <img data-src='https://cdn.cloudflare.steamstatic.com/steam/apps/"+result[key].i+"/header.jpg' width='100%' height='215px' alt=''/>\n" +
+                    "<a class='gamename' href='steam://run/"+result[key].i+"' style='color: #000;'><h4>"+result[key].c+"</h4></a>"+
+                "    </li>";
+
+            str = str+st;
+        }
+
+        $("#dd").html(str);
+
+
+        loadlazy();
+    },
+    error:function() {          //异步调用失败
+        /* 错误展示 */
+    }
+});
+
+// 判断页面是否到了需要显示图片的位置并赋值
+function loadlazy(){
+    var itv = setTimeout(function(){
+        var winHeight = $(window).height();
+        var scrolltop = $(window).scrollTop();
+        $('img').each(function(){
+            var oTop = $(this).offset().top;
+            if ($(this).attr("src") == undefined){
+                if((oTop-scrolltop) >= 0 && (oTop-scrolltop)<winHeight){
+                    var src = $(this).attr("data-src");
+                    $(this).attr("src",src);
+                }
+            }
+
+        })
+    },100);
+}
+
+// 页面滚动加载
+$(window).scroll(function() {
+    loadlazy();
+});
+</script>
+</html>
