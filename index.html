@@ -1,199 +1,346 @@
-index.html
+
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>沙雕小星星</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div class="btn">
-        <p>&nbsp;👇WATCH MY CV👇</p>
-    </div>
-    <div class="top">
-        <a href="https://blog.csdn.net/weixin_51263734" target="_blank">我的兴趣</a>
-        <a href="https://blog.csdn.net/weixin_51263734" target="_blank">我的过去</a>
-        <a href="https://blog.csdn.net/weixin_51263734" target="_blank">我的梦想</a>
-        <a href="https://blog.csdn.net/weixin_51263734" target="_blank" style="float:right">小风的博客</a>
-    </div>
-    <div class="content">
-    
-        <h1 class="avr">Give AR/VR Eyes and Brain</h1>
-    </div>
 
+    <head>
+        <meta charset="UTF-8">
+        <title>中华传统文化</title>
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <!--<script src="js/pace.min.js"></script>-->
+        <!--<link href="css/pace-theme-flash.min.css" rel="stylesheet" />-->
+        <link rel="stylesheet" href="css/style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--避免IE使用兼容模式-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta name="screen-orientation" content="portrait">
+        <!-- UC强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- UC强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- QQ强制全屏 -->
+        <meta name="browsermode" content="application">
+        <!-- UC应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- UC应用模式 -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- windows phone 点击无高光 -->
+        
+    </head>
 
-    <div class="yinyue">
-        <img class="music" src="./33.png" alt="">
-        <audio autoplay="autoplay" id="audio" loop="loop">
-            <source src="./music1.mp3" type="audio/MP3">
+    <body>
+        <!-- 预设audio标签，后台播放用 <audio id="main" hidden="hidden" src="" loop></audio>-->
+        <audio id="main" hidden="hidden" src="file/jiangnan.mp3" loop="" autoplay=""></audio>
+        <!--PC端显示的导航栏-->
+        <nav class="clearfix">
+            <a href="#" onclick="push('index')">中华传统文化</a>
+            <span>◆</span>
+            <a href="#" onclick="push('clock')">时辰</a>
+            <a href="#" onclick="push('solarterm')">节气</a>
+            <a href="#" onclick="push('new-year')">春节</a>
+            <a href="#" onclick="push('poem')">诗词</a>
+            <a href="#" onclick="push('qin')">五音</a>
+            <a href="#" onclick="push('bmzy')">笔墨</a>
+        </nav>
+        <section class="main1 scene" id="page-index">
 
-        </audio>
+            <!--由于卡顿问题，取消云朵动画
+                <div class="cloud_block cloud1"></div>
+            <div class="cloud_block cloud2"></div>-->
+            <div class="layer" data-depth="0.10"><img class="p1_1 auto-p " src="picture/4.png"></div>
+            <div class="layer" data-depth="0.12"><img class="p1_2 auto-p " src="picture/p1_bg10.png"></div>
+            <div class="layer" data-depth="0.15"><img class="p1_3 auto-p " src="picture/p1_bg5.png"></div>
+            <div class="layer" data-depth="0.2"><img class="p1_4 auto-p " src="picture/p1_bg6.png"></div>
+            <div class="layer" data-depth="0.24"><img class="p1_5 auto-p " src="picture/p1_bg7.png"></div>
+            <div class="layer" data-depth="0.27"><img class="p1_6 auto-p " src="picture/p1_bg8.png"></div>
+            <div class="layer" data-depth="0.3">
+                <img src="picture/p1_bg1.png" class="p1_7 auto-p "></div>
+            <div class="layer" data-depth="0.35"><img class="p1_8 auto-p " src="picture/p1_bg2.png"></div>
+            <div class="layer" data-depth="0.4"><img class="p1_9 auto-p " src="picture/p1_bg3.png"></div>
+            <div class="layer" data-depth="0.70">
+                <div class="title"></div>
 
-    </div>
-    <div class="row">
-        <div class="centercolumn">
-            <div class="card">
-
-                <h2 id="biaoti">浮生六记卷一</h2><br />
-                <hr />
-                <h4 id="qita">2021 年 1 月 29日</h4>
-
-                <p style="text-indent:2em">我生于乾降二十八年(1763年)的冬天ー月十ニ日。那时天下承平，国家安泰。我生于读书人家家在苏州城沧浪亭畔，上天待我何等厚爱。</p>
-                <p style="text-indent:2em">回想这一生，真如东坡先生所说“事如春梦了无痕”，如果不将之记下来，未免辜负了天赋幸运。</p>
-                <p style="text-indent:2em">
-                    而我总觉得，《诗三百》以《关》为开篇，这是将世间夫妇之爱放在卷首。那么我何妨也将之放在最开始，
-                    余下的再慢慢道来。只是惭愧自己年少失学，文字粗浅，所写所记，皆是真情实事而已。如果一定要挑剔其中的文法错漏，那就是对着待磨的铜镜，却希冀它明察秋毫。
-                </p>
-                <p style="text-indent:2em">
-                    小时候我与金沙于家的女儿有过婚约。那女孩子八岁夭折。后来娶妻陈氏，名芸，字淑珍，她的父亲陈心馀是我舅舅，舅母金氏，还有一个表弟名为克昌。
-                    芸天性聪慧，牙牙学语时，其父教她《琵琶行》，一学能便能背诵。她四岁时父亲去世，弱母幼弟，家徒四壁。所幸芸女红针
-                    线十分出色，到她年纪稍长，一家三口的生计便着落在她针指间的辛劳，不仅家人衣食周全，还能供克昌读书。
-                </p>
-                <p style="text-indent:2em">
-                    有一天，她在克昌的书箱里翻到《琵琶行》，回想儿时背诵的内容，逐字辨识，学会了识字。刺绣的闲暇她自学不辍，渐渐通晓诗词，曾写过“秋侵人影瘦，霜染菊花肥”
-                    这样清丽的诗句。十三岁时，母亲带我回娘家小住。芸比我大十个月，我一直把她叫作“淑姐姐”。我们两小无猜，她悄悄给我看自己的诗句
-                    我感叹她才思清雅灵秀，却也暗暗担心，如此的聪慧敏感，恐怕不是福泽深厚之相。
-                </p>
-                <p style="text-indent:2em">
-                    尽管如此，我已倾心于芸，不能释怀。私下对母亲说：“我若娶妻，一定要娶淑姐姐。”母亲也喜欢她的温柔和顺，便摘下金指环相赠，作为信物与陈家订下婚约。
-                </p>
             </div>
-            <br /><br />
-            <div class="card">
-                <h2 id="biaoti">闺房之乐</h2><br />
-                <hr />
-                <h4 id="qita">2020 年 1 月 30日</h4>
-                <p style="text-indent:2em">
-                    那一天是乾隆四十年(1775年)七月十六日，我与芸订婚。
-
-                </p>
-                <p style="text-indent:2em">
-                    这一年冬天，芸的堂姐出嫁，我又跟着母亲前去观礼。族中
-                    组妹都来送嫁，满室新裁衣裳的鲜亮颜色，唯有芸衣着淡雅，只
-                    双鞋是新的。我偷看她的新鞋，刺绣精巧美丽，悄悄问她，她
-                    说是自己做的，这才知道芸的聪慧敏捷，不止在诗词一道
-                    这时的芸清秀瘦弱，窄窄的肩，脖颈修长，弯弯的眉毛，眼
-                    睛灵秀俏丽，顾盼间神韵动人。唯是上唇略短，微露出两颗牙
-                    齿，虽然这似乎不是有福之相，但别有一种妩媚娇柔之感，让人怦然心动。
-                </p>
-                <p style="text-indent:2em">
-                    央她再给我看她的诗稿，发现多是未能成篇的残句，或是一
-                    联，或是三四行。问她为何，她笑着说：“自己随手写的，也没人
-                    指点，留待懂诗的知己教我，一起推敲完成。”
-                    我开玩笑地把她的诗稿题作“锦囊佳句”，却不知这一个玩
-                    笑，已经预示了芸日后的命运。
-                </p>
-                <p style="text-indent:2em">
-                    “锦囊佳句”
-                </p>
-                <p style="text-indent:2em">
-                    （此处用唐代诗人李贺故事。李贺少年时出游，常有一仆僮背
-                    着锦囊跟随。每有诗兴，他就把所得诗句记下来，投入锦囊中
-                    称为“锦囊佳句”。据说其祖母见到这锦囊，感叹道：“这孩子写
-                    诗是要把心呕出来啊。”而李贺果然早夭。所以沈复题“锦囊佳
-                    句”，虽然贴切，却非佳兆。）
-                </p>
-                <p style="text-indent:2em">
-                    这一夜，和兄弟们到城外送亲，回来时已过半夜，我觉得
-                    饿了，仆妇呈上蜜枣，正嫌太甜，芸出来，悄悄拽我的袖子。我心领神会，跟她回房，
-                    原来她在房中藏着粥和几样小菜，还是热的。
-                </p>
+            <div class="layer" data-depth="0.550">
+                <div class="main-nav ">
+                    <a href="#" class="item fadeInUp" style="-webkit-animation-delay: .25s;" onclick="push('clock')"><img src="picture/shichen.png"></a>
+                    <a href="#" class="item fadeInUp" style="-webkit-animation-delay: .5s;" onclick="music('spring');push('solarterm')"><img src="picture/jieqi.png"></a>
+                    <a href="#" class="item fadeInUp" style="-webkit-animation-delay: .75s;" onclick="music('newyear');push('new-year')"><img src="picture/chunjie.png"></a>
+                    <a href="#" class="item fadeInUp" style="-webkit-animation-delay: 1s;" onclick="music('poem');push('poem')"><img src="picture/shici.png"></a>
+                    <a href="#" class="item fadeInUp" style="-webkit-animation-delay: 1.25s;" onclick="music('stop');push('qin')"><img src="picture/wuyin.png"></a>
+                    <div class="clearfix"></div>
+                </div>
             </div>
+        </section>
+        <section class="clock" id="page-clock">
+            <div class="full clock">
+                <div class="inner">
+                    <div class="circle">
+                        <div class="time">
+                            <h1 id="timestr"></h1>
+                            <h1 id="nowtime"><time id="hour"></time>:<time id="minute"></time>:<time id="second"></time></h1>
+                        </div>
+                        <div class="hander"></div>
+                        <ul class="minute-divide" id="JS-minute-divide">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul class="hour-name" id="JS-hour-name">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li>1</li>
+                            <li>3</li>
+                            <li>5</li>
+                            <li>7</li>
+                            <li>9</li>
+                            <li>11</li>
+                        </ul>
+                    </div>
+                </div>
 
-        </div>
+            </div>
+            <div class="bottom">
+                <div class="item">
+                	<a href="#" onclick="hourinfo(0)">子</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(1)">丑</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(2)">寅</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(3)">卯</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(4)">辰</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(5)">巳</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(6)">午</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(7)">未</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(8)">申</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(9)">酉</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(10)">戌</a>
+                </div>
+                <div class="item">
+                    <a href="#" onclick="hourinfo(11)">亥</a>
+                </div>
+            </div>
+        </section>
+        <section class="solarterm" id="page-solarterm">
+            <div class="full">
+                <div class="col-1-4">
+                    <div class="hexagon spring">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li><span>春</span>
+                        </ul>
 
+                    </div>
+                    <div class="month"><span>二月</span><span>立春<br>2月3~5日</span><span>雨水<br>2月18~20日</span></div>
+                    <div class="month"><span>三月</span><span>惊蛰<br>3月5~7日</span><span>春分<br>3月20~22日</span></div>
+                    <div class="month"><span>四月</span><span>清明<br>4月4~6日</span><span>谷雨<br>4月19~21日</span></div>
+                </div>
+                <div class="col-1-4">
+                    <div class="hexagon summer">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li><span>夏</span>
+                        </ul>
 
-    </div>
-   
-    
-    <br /><br />
-    <button class="bt" onclick="window.open('https://blog.csdn.net/weixin_51263734')">MY CSDN BLOG</button>
+                    </div>
+                    <div class="month"><span>五月</span><span>立夏<br>5月5~7日</span><span>小满<br>5月20~22日</span></div>
+                    <div class="month"><span>六月</span><span>芒种<br>6月5~7日</span><span>夏至<br>6月21~22日</span></div>
+                    <div class="month"><span>七月</span><span>小暑<br>7月6~8日</span><span>大暑<br>7月22日~24日</span></div>
+                </div>
+                <div class="col-1-4">
+                    <div class="hexagon autumn">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li><span>秋</span>
+                        </ul>
 
-    <script>
-    let mucics = document.getElementById('audio')
-    document.body.addEventListener('mousemove', function() {
-        setTimeout(() => {
-            mucics.play();
-        }, 2000);
-    }, false);
-    </script>
-    
-    <div class="footer">
-        <br />
-        <p>希望能成为有梦想 有温度的教技人</p><br />
-        <p>你好 我是风小风</p><br />
-        <a href="https://blog.csdn.net/weixin_51263734" target="_blank"><img class="someimg" src="./hou.png" alt="" width="30"></a>
-        <abbr title="QQ账号：2633386281"><img class="someimg" src="./qq.png" alt="" width="30"></abbr>
-        <abbr title="邮箱：fzx2003zhixue@163.com"><img class="someimg" src="./mail.png" alt="" width="30"></abbr>
-    </div>
-    <script>
-        //鼠标点击出现爱心特效  这部分特效是从一个网页搬过来的  觉得挺好看的
-        (function (window, document, undefined) {
-            var hearts = [];
-            window.requestAnimationFrame = (function () {
-                return window.requestAnimationFrame ||
-				window.webkitRequestAnimationFrame ||
-				window.mozRequestAnimationFrame ||
-				window.oRequestAnimationFrame ||
-				window.msRequestAnimationFrame ||
-				function (callback) {
-				    setTimeout(callback, 1000 / 60);
-				}
-            })();
-            init();
-            function init() {
-                css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
-                attachEvent();
-                gameloop();
-            }
-            function gameloop() {
-                for (var i = 0; i < hearts.length; i++) {
-                    if (hearts[i].alpha <= 0) {
-                        document.body.removeChild(hearts[i].el);
-                        hearts.splice(i, 1);
-                        continue;
-                    }
-                    hearts[i].y--;
-                    hearts[i].scale += 0.004;
-                    hearts[i].alpha -= 0.013;
-                    hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);background:" + hearts[i].color;
-                }
-                requestAnimationFrame(gameloop);
-            }
-            function attachEvent() {
-                var old = typeof window.onclick === "function" && window.onclick;
-                window.onclick = function (event) {
-                    old && old();
-                    createHeart(event);
-                }
-            }
-            function createHeart(event) {
-                var d = document.createElement("div");
-                d.className = "heart";
-                hearts.push({
-                    el: d,
-                    x: event.clientX - 5,
-                    y: event.clientY - 5,
-                    scale: 1,
-                    alpha: 1,
-                    color: randomColor()
-                });
-                document.body.appendChild(d);
-            }
-            function css(css) {
-                var style = document.createElement("style");
-                style.type = "text/css";
-                try {
-                    style.appendChild(document.createTextNode(css));
-                } catch (ex) {
-                    style.styleSheet.cssText = css;
-                }
-                document.getElementsByTagName('head')[0].appendChild(style);
-            }
-            function randomColor() {
-                return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
-            }
-        })(window, document);
-    </script>
-</body>
+                    </div>
+                    <div class="month"><span>八月</span><span>立秋<br>8月7~9日</span><span>处暑<br>8月22~24日</span></div>
+                    <div class="month"><span>九月</span><span>白露<br>9月7~9日</span><span>秋分<br>9月22~24日</span></div>
+                    <div class="month"><span>十月</span><span>寒露<br>10月8~9日</span><span>霜降<br>10月23~24日</span></div>
+                </div>
+                <div class="col-1-4">
+                    <div class="hexagon winter">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li><span>冬</span>
+                        </ul>
+
+                    </div>
+                    <div class="month"><span>十一月</span><span>立冬<br>11月7~8日</span><span>小雪<br>11月22~23日</span></div>
+                    <div class="month"><span>十二月</span><span>大雪<br>12月6~8日</span><span>冬至<br>12月21~23日</span></div>
+                    <div class="month"><span>一月</span><span>小寒<br>1月5~7日</span><span>大寒<br>1月20~21日</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="new-year" id="page-new-year">
+            <div class="up">
+                <div class="item" onclick="newyear(0)"><div class="item-inner-1">
+                	腊月<br>廿三
+                </div></div>
+                <div class="item" onclick="newyear(1)"><div class="item-inner-2">腊月<br>廿四</div></div>
+                <div class="item" onclick="newyear(2)"><div class="item-inner-1">腊月<br>廿五</div></div>
+                <div class="item" onclick="newyear(3)"><div class="item-inner-2">腊月<br>廿六</div></div>
+                <div class="item" onclick="newyear(4)"><div class="item-inner-1">腊月<br>廿七</div></div>
+                <div class="item" onclick="newyear(5)"><div class="item-inner-2">腊月<br>廿八</div></div>
+                <div class="item" onclick="newyear(6)"><div class="item-inner-1">腊月<br>廿九</div></div>
+                <div class="item" onclick="newyear(7)"><div class="item-inner-2">腊月<br>三十</div></div>
+                <div class="item" onclick="newyear(8)"><div class="item-inner-1">正月<br>初一</div></div>
+                <div class="item" onclick="newyear(9)"><div class="item-inner-2">正月<br>初二</div></div>
+                <div class="item" onclick="newyear(10)"><div class="item-inner-1">正月<br>初三</div></div>
+                <div class="item" onclick="newyear(11)"><div class="item-inner-2">正月<br>初四</div></div>
+                <div class="item" onclick="newyear(12)"><div class="item-inner-1">正月<br>初五</div></div>
+                <div class="item" onclick="newyear(13)"><div class="item-inner-2">正月<br>初六</div></div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="full container-fill-height">
+                <div class="info container-content-middle">
+                    <h1 class="display-3">春节习俗</h1>
+                    <h4>春节是我国一个古老的节日，也是全年最重要的一个节日，如何过庆贺这个节日，在千百年的历史发展中，形成了一些较为固定的风俗习惯，有许多还相传至今。</h4>
+
+                </div>
+                <div class="picture"></div>
+            </div>
+            <div></div>
+        </section>
+        <section class="poem" id="page-poem">
+            <div class="full container-fill-height">
+                <div class="info container-content-middle">
+                    <div class="content">
+                        <h1>江畔何人初见月？</h1>
+                        <h1>江月何年初照人？</h1></div>
+                    <div class="from">
+                        <h1><span class="author">张若虚</span>《<span class="title">春江花月夜</span>》</h1></div>
+                </div>
+            </div>
+            <div class="switch">
+                <div class="rotate" onclick="roll()"></div>
+                <h1>换</h1></div>
+        </section>
+        <section class="qin" id="page-qin">
+            <!--高音质版
+            <audio id="key-11" src="music/effect/11.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-12" src="music/effect/12.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-13" src="music/effect/13.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-14" src="music/effect/14.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-15" src="music/effect/15.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-16" src="music/effect/16.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-17" src="music/effect/17.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-21" src="music/effect/21.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-22" src="music/effect/22.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-23" src="music/effect/23.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-24" src="music/effect/24.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-25" src="music/effect/25.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-26" src="music/effect/26.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-27" src="music/effect/27.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-31" src="music/effect/31.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-32" src="music/effect/32.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-33" src="music/effect/33.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-34" src="music/effect/34.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-35" src="music/effect/35.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-36" src="music/effect/36.wav" hidden="hidden" preload="none"></audio>
+            <audio id="key-37" src="music/effect/37.wav" hidden="hidden" preload="none"></audio>-->
+
+            <!--低音质版-->
+            <audio id="key-11" src="file/11.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-12" src="file/12.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-13" src="file/13.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-14" src="file/14.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-15" src="file/15.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-16" src="file/16.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-17" src="file/17.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-21" src="file/21.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-22" src="file/22.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-23" src="file/23.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-24" src="file/24.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-25" src="file/25.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-26" src="file/26.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-27" src="file/27.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-31" src="file/31.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-32" src="file/32.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-33" src="file/33.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-34" src="file/34.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-35" src="file/35.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-36" src="file/36.mp3" hidden="hidden" preload="none"></audio>
+            <audio id="key-37" src="file/37.mp3" hidden="hidden" preload="none"></audio>
+<div class="mask">
+	
+</div>
+            <div class="line clearfix" style="padding-top: 120px;">
+                <div class="key-bg-1" onclick="qin('key-31')">宫<kbd>1</kbd></div>
+                <div class="key-bg-2" onclick="qin('key-32')">商<kbd>2</kbd></div>
+                <div class="key-bg-3" onclick="qin('key-33')">角<kbd>3</kbd></div>
+                <div class="key-bg-4" onclick="qin('key-34')">徵<kbd>4</kbd></div>
+                <div class="key-bg-5" onclick="qin('key-35')">变徵<kbd>5</kbd></div>
+                <div class="key-bg-6" onclick="qin('key-36')">羽<kbd>6</kbd></div>
+                <div class="key-bg-7" onclick="qin('key-37')">变羽<kbd>7</kbd></div>
+            </div>
+            <div class="line clearfix">
+                <div class="key-bg-1" onclick="qin('key-21')">宫<kbd>Q</kbd></div>
+                <div class="key-bg-2" onclick="qin('key-22')">商<kbd>W</kbd></div>
+                <div class="key-bg-3" onclick="qin('key-23')">角<kbd>E</kbd></div>
+                <div class="key-bg-4" onclick="qin('key-24')">徵<kbd>R</kbd></div>
+                <div class="key-bg-5" onclick="qin('key-25')">变徵<kbd>T</kbd></div>
+                <div class="key-bg-6" onclick="qin('key-26')">羽<kbd>Y</kbd></div>
+                <div class="key-bg-7" onclick="qin('key-27')">变羽<kbd>U</kbd></div>
+            </div>
+            <div class="line clearfix">
+                <div class="key-bg-1" onclick="qin('key-11')">宫<kbd>A</kbd></div>
+                <div class="key-bg-2" onclick="qin('key-12')">商<kbd>S</kbd></div>
+                <div class="key-bg-3" onclick="qin('key-13')">角<kbd>D</kbd></div>
+                <div class="key-bg-4" onclick="qin('key-14')">徵<kbd>F</kbd></div>
+                <div class="key-bg-5" onclick="qin('key-15')">变徵<kbd>G</kbd></div>
+                <div class="key-bg-6" onclick="qin('key-16')">羽<kbd>H</kbd></div>
+                <div class="key-bg-7" onclick="qin('key-17')">变羽<kbd>J</kbd></div>
+            </div>
+            <button id="stop-music" onclick="music('stop')">停止背景音乐</button>
+        </section>
+        <section id="page-bmzy"><video>
+        	<source src="myvideo.mp4" type="video/mp4">
+        	当前浏览器不支持 video直接播放，点击这里下载视频： <a href="javascript:;">下载视频</a>
+        </video></section>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
 </html>
+
+
