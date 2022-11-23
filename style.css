@@ -1,170 +1,168 @@
-@charset "utf-8";
-/* CSS Document */
-*{
-    margin:0;
-    padding:0;
-}
-body{
-    font-family:"微软雅黑";
-    background-color:#ddd;
-}
-.box{
-    width:right;
-    height:600px;
-    margin:30px auto;
-    padding:20px;
-}
-.box .head span{
-    font-size:18px;
-    color:#333;
-}
-.box .head{
-    margin-bottom:20px;
-}
-.box .head a{
-    text-decoration:none;
-    float:right;
-    font-size:15px;
-    color:#333;
-}
-.box .head a:hover{
-color:#F00;
-}
-@media(max-width: 550px)
-{
-    .box ul li {
-        width:100%;
-    }
-}
-@media(min-width: 550px)
-{
-    .box ul li {
-        width:49%;
-    }
+style.css
+* {
+    margin: 0px;/*设置四周边距都为0*/
+    box-sizing: border-box;/*宽高的设置值包括border等*/
 }
 
-
-@media(min-width: 1020px)
-{
-    .box ul li {
-        width:32%;
-    }
+body {
+    background: url("44.jpg");/*设置背景图片*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;/*设置背景图不随网页滑动而改变*/
+    background-size: cover;
+}
+.content {
+    perspective: 400px;
+    width: 100%;
+    height: 620px;
+    position: relative;
+}
+/* 顶部导航条 */
+.top {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+}
+.top a {
+  float: left;
+  display: block;/*将链接变为块元素*/
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;/*去掉链接的下划线*/
+ }
+ 
+/* 链接颜色修改 */
+.top a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-@media(min-width: 1500px)
-{
-    .box ul li {
-        width:24%;
-    }
-}
-@media(min-width: 1920px)
-{
-    .box ul li {
-        width:24%;
-    }
-}
-@media(min-width: 1921px)
-{
-    .box ul li {
-        width:435px;
-    }
+/*正中间的字*/
+.avr{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 300px;
+    margin: auto;
+    bottom: 0;
+    color: #fff;
+    font-size: 70px;
+    font-weight: 500;
 }
 
-
-
-.box ul li{
-
-    height:235px;
-    list-style:none;
-    position:relative;
-    float:left;
-    margin-left:1%;
-    margin-bottom:1%;
-    overflow:hidden;
-
+audio {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
 }
-.box ul li .deatil{
-    width:100%;
-    height:215px;
-    text-align:center;
-    background:rgba(0,0,0,0.7);
-    position:absolute;
-    top:-215px;
-    -webkit-transition:all 0.3s ease;<!--适应ie，谷歌，苹果浏览器内核-->
--o-transition:all 0.3s ease;<!--适应Opera浏览器内核-->
--moz-transition:all 0.3s ease;<!--火狐浏览器-->
--ms-transition:all 0.3s ease;<!--微软-->
-}
-.box ul li .deatil div span{
-    border:solid 1px #009ad6;
-    border-radius: 8px;
-    background-color:#1B2838;
-    padding:3px 5px 3px 5px;
-    opacity:0.8;
-    color: #67c1f5;
-    margin-left:3px;
+/* 创建三列 本来是想做三列的，后来没做也懒得改了 */
+/* center column */
+.leftcolumn {
+    float: left;
+    width: 10%;
 }
 
-.box ul li .deatil h2{
-    font-size:1.2em;
-    color:#fff;
-    text-align:center;
-    padding-top:3%;
+.centercolumn {
+    margin: auto;
+    width: 80%;
+    height:1000px;
+    padding: 10px;
+    
 }
-.box ul li .deatil h6{
-    color:#a1a3a6;
-    text-align:center;
-}
-.box ul li .deatil .bq{
-    font-size:1em;
-    text-align:center;
-    margin:8% 5px;
-    color:#fff;
-}
-.box ul li .deatil p{
-    font-size:16px;
-    text-align:center;
-    margin:30px;
-    color:#fff;
+.rightcolumn {
+    float: left;
+    width: 10%;
 }
 
-.box ul li .deatil .aaa{
-    font-size:15px;
-
-    color:#fff;
-    background-color:#f47920;
-    border:solid 1px #009ad6;
-    text-decoration:none;
-    width:100px;
-    height:40px;
-    text-align:center;
-    line-height:40px;
-    border-radius: 8px;
-    margin: 0 auto;
-    padding:8px 13px;
-    margin-top:1px  !important;
-
+/* 文章卡片 */
+.card {
+    background-color:rgba(255,255,255,0.5);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    
 }
-.box ul li .deatil .ca{
-    text-align:right;
-}
-.box ul li .deatil .ca a{
-    margin-left: 5px;
-}
-
-.box ul li .deatil .aaa:hover{
-
-    background-color:#905a3d;
-
-}
-
-.box ul li:hover .deatil{
-    top:0;
-}
-
-h4{
+#biaoti {
     text-align: center;
 }
-.gamename:link{text-decoration: none;}
-.gamename:visited{text-decoration: none;}
-.gamename:active{text-decoration: none;}
+#qita {
+    text-align: right;
+}
+/* 列后面清除浮动 */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/*旋转的音符效果*/
+.music {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 40px;
+    height: 30px;
+    animation: muscis 5s linear infinite;
+}
+@keyframes muscis {
+    from {
+        transform: rotate (0deg);
+        opacity: .6;
+    }
+
+    to {
+        transform: rotate(360deg);
+        opacity: .8;
+    }
+}
+
+.yinyue {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 400px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+/* 底部 */
+.footer {
+    background-image: linear-gradient(rgba(211, 104, 29, 0.80),rgba(5,72,99,0.80));
+   
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*中间的字效果*/
+.btn {
+    width: 18%;
+    height: 60px;
+    position: absolute;
+    top: 65%;
+    left: 41%;
+    background-image: linear-gradient(rgba(211, 104, 29, 0.95),rgba(5,72,99,0.95));
+    border-radius: 40px;
+    border-color: dodgerblue;
+}
+
+.btn p{
+        line-height: 60px;
+        font-size: 22px;
+        color: black;
+    }
+.bt {
+    cursor: pointer; /*使鼠标放上边显示手指形状*/
+    width: 25%; /*设置宽*/
+    height: 50px; /*设置高*/
+    display: block; /*行内元素设置宽高不生效，使用display:block;可以将行内元素设置为块集元素 */
+    text-align: center; /*文字在容器中横向居中*/
+    line-height: 40px; /*当数值与height一样的时候文字垂直居中*/
+    text-decoration: none; /*将文字下划线去除*/
+    background-image: linear-gradient(rgba(211, 104, 29, 0.95),rgba(5,72,99,0.95)); /*设置元素背景颜色：渐变*/
+    color: rgba(0, 0, 0, 0.60); /*设置文字颜色*/
+    border: none;  /*去除边框*/
+    margin-bottom: 10px; /*下部外边框距离10像素*/
+    margin: auto;  /*使按钮居中*/
+    font-size: 20px; /*设置字体大小*/
+}
